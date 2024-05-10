@@ -10,17 +10,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="com-sm-4 offset-2">
-                            <form [formGroup]="userDetails" (ngSubmit)="saveData()">
+                            <form [formGroup]="userDetails">
                                 <div class="row">
                                     <div class="col-8">
                                         <label>Name</label>
                                         <input type="text" class="form-control" formControlName="name">
-                                        <div class="text-danger" *ngIf="userDetails.controls?.['name']?.touched">
-
-                                            <span *ngIf="userDetails.controls?.['name']?.errors?.['required']">This is
-                                                required</span>
-
-                                        </div>
                                     </div>
 
                                 </div>
@@ -40,32 +34,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="text-center">
-                                <h1>All Users</h1>
-                            </div>
 
-                            <table class="teble table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Name</th>
-                                        <th>UserName</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr *ngFor="let data of userArray">
-                                        <td>{{data.id}}</td>
-                                        <td><a [routerLink]="['/edit',data.id]">{{data.name}}</a></td>
-                                        <td>{{data.username}}</td>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
                 </div>
                 <div class="card-footer">
                     <div class="text-center">

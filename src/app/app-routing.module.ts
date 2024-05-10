@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveformsComponent } from './components/reactiveforms/reactiveforms.component';
+import { StudentComponent } from './components/student/student.component';
 
 const routes: Routes = [
   {
-    path:'',component:ReactiveformsComponent
-  }
+    path:'',component:StudentComponent
+  
+  },
+  
 ];
 
 @NgModule({
